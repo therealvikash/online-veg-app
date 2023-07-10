@@ -7,3 +7,7 @@
 6. Customer has the liberty to give feedback for the items they have bought.
 7. The operations are mapped using mapping such as oneToOne, oneToMany, manyToMany, etc.
 8. The exception handling is done for all the methods and calls.
+9. Apart from this, the project has jenkins pipeline stages, to do gradle build, test, check code coverage
+   using sonarqube and sonar quality gate as well. Once the condition of quality gate is satisfied, the
+   artifact of the projects get deployed to Nexus. Also the docker config file is present, which basicall
+   pushes the image to docker hub.
