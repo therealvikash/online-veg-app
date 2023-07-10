@@ -29,7 +29,7 @@ public class AdminController {
 		return new ResponseEntity<>(saveAdmin,HttpStatus.CREATED);
 	}
 	
-	
+	//Requires Enhancement
 	@GetMapping(value="/allAdmins")
 	public ResponseEntity<Admin> getAllAdmins(@PathVariable Integer adminId)
 	{
@@ -53,7 +53,7 @@ public class AdminController {
 	}
 	
 	@PutMapping(value="/{adminId}")
-	public ResponseEntity<Admin> updateAdmin(@PathVariable Integer adminId, Admin admin)
+	public ResponseEntity<Admin> updateAdmin(@PathVariable Integer adminId, @RequestBody Admin admin)
 	{
 		Admin updatedAdmin = adRepo.updateAdminDetails(adminId, admin);
 		return new ResponseEntity<Admin>(updatedAdmin, HttpStatus.CREATED);

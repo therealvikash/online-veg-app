@@ -34,10 +34,10 @@ public class CustomerServiceImpl implements ICustomerService {
 		Optional<Customer> opt = cusRepo.findById(cid);
 		if (opt.isPresent()) {
 			Customer opt1 = opt.get();
-			opt1.setName(cus.getName());
-			opt1.setMobileNumber(cus.getMobileNumber());
-			opt1.setEmailId(cus.getEmailId());
-			opt1.setAddress(cus.getAddress());
+			opt1.setCustomerName(null);
+			opt1.setCustomerMobileNumber(cus.getCustomerMobileNumber());
+			opt1.setCustomerEmailId(cus.getCustomerEmailId());
+			opt1.setCustomerAddress(cus.getCustomerAddress());
 			return cusRepo.save(opt1);
 
 		} else {
@@ -65,13 +65,6 @@ public class CustomerServiceImpl implements ICustomerService {
 		} else {
 			throw new NoSuchCustomerException("customer with given id:" + cid + "not available");
 		}
-
-	}
-
-	@SuppressWarnings("unused")
-	@Override
-	public List<Customer> viewCustomerList(String address) throws NoSuchCustomerException {
-		return cusRepo.findByAddress(address);
 
 	}
 

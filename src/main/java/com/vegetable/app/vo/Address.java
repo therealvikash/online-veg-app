@@ -7,7 +7,6 @@ import javax.persistence.Id;
 public class Address {
 	@Id
 	@GeneratedValue
-	@Column(name = "addressno")
 	private Integer addressId;
 	@Column
 	private String flatNo;

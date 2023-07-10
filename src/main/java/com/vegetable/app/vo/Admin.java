@@ -1,19 +1,16 @@
 package com.vegetable.app.vo;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Admin {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	@Id
-	private Integer adminId;
-	@Column
+	private int adminId;
+
 	private String name;
-	@Column
+
 	private String contactNumber;
 
 	public Admin() {

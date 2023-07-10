@@ -14,8 +14,6 @@ public interface ICustomerService {
 
 	public Customer viewCustomer(Integer cid) throws NoSuchCustomerException;
 
-	public List<Customer> viewCustomerList(String address);
-
 	public List<Customer> getAllcus();
 
 }

@@ -44,15 +44,15 @@ public class CustomerController {
 		return new ResponseEntity<List<Customer>>(allcus, HttpStatus.OK);
 	}
 
-	@GetMapping(value = "/view/{address}")
-	public ResponseEntity<List<Customer>> viewCustomerList(@PathVariable String address) {
-		try {
-			List<Customer> allcus = customerService.viewCustomerList(address);
-			return new ResponseEntity<List<Customer>>(allcus, HttpStatus.OK);
-		} catch (NoSuchCustomerException e) {
-			return new ResponseEntity<List<Customer>>(HttpStatus.NOT_FOUND);
-		}
-	}
+//	@GetMapping(value = "/view/{address}")
+//	public ResponseEntity<List<Customer>> viewCustomerList(@PathVariable String address) {
+//		try {
+//			List<Customer> allcus = customerService.viewCustomerList(address);
+//			return new ResponseEntity<List<Customer>>(allcus, HttpStatus.OK);
+//		} catch (NoSuchCustomerException e) {
+//			return new ResponseEntity<List<Customer>>(HttpStatus.NOT_FOUND);
+//		}
+//	}
 
 	@GetMapping(value = "/cid/{cid}")
 	public ResponseEntity<Customer> viewCustomer(@PathVariable Integer cid) {
